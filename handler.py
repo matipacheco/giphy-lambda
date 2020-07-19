@@ -2,13 +2,16 @@ import sys
 from giphy_client import V1
 
 payload = {
-	"version": 'v1',
+	"version": "v1",
+	"resource": "gifs",
+	"endpoint": "random",
 	"config": {
-		"resource": "gifs",
+		"endpoint": "random",
 		"tag": "soccer goal",
 		"rating": "r"
 	}
 }
 
-version = payload["version"].upper()
+version = payload.pop("version").upper()
 client = globals()[version](payload)
+print(client.get_image())
