@@ -1,9 +1,25 @@
 import requests
 from .base import GiphyClient
 
+v1_schema = {
+	"type": "object",
+	"required": ["endpoint", "config"],
+	"properties": {
+		"version": {"type": "string"},
+		"endpoint": {"type": "string", "enum": ["random"]},
+		"resource": {"type": "string", "enum": ["gifs", "stickers"]},
+		"config": {
+			"type": "object",
+			"properties": {
+				"tag": {"type": "string"},
+				"rating": {"type": "string", "enum": ["g", "pg", "pg-13", "r"]}
+			}
+		}
+	}
+}
+
 class V1(GiphyClient):
 	def __init__(self, payload):
-		super(V1, self).__init__(payload)
 		self.endpoint = payload["endpoint"]
 		self.resource = payload["resource"]
 
