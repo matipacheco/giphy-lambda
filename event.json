@@ -1,0 +1,10 @@
+{
+  "version": "v1",
+  "resource": "gifs",
+  "endpoint": "random",
+  "config": {
+    "endpoint": "random",
+    "tag": "soccer goal",
+    "rating": "r"
+  }
+}
