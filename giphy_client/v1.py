@@ -3,7 +3,7 @@ from .base import GiphyClient
 
 v1_schema = {
 	"type": "object",
-	"required": ["endpoint", "config"],
+	"required": ["version", "endpoint", "config"],
 	"properties": {
 		"version": {"type": "string"},
 		"endpoint": {"type": "string", "enum": ["random"]},

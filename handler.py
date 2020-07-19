@@ -1,5 +1,5 @@
 import sys
-from jsonschema import validate
+from jsonschema import validate, ValidationError
 
 from giphy_client import V1, v1_schema
 
@@ -12,5 +12,5 @@ def handler(event, context):
 
 		return { "url": client.get_image() }
 
-	except ModuleNotFoundError as error:
+	except ValidationError as error:
 		return { error: "Error {0}".format(error) }
