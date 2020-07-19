@@ -2,7 +2,7 @@ from jsonschema import validate
 
 schema = {
 	"type": "object",
-	"required": ["version", "config"],
+	"required": ["config"],
 	"properties": {
 		"version": {"type": "string"},
 		"config": {
