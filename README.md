@@ -17,4 +17,4 @@ python-lambda-local -f handler handler.py event.json
 
 Follow [this](https://docs.aws.amazon.com/lambda/latest/dg/python-package.html) guide provided by AWS.
 
-**With a virtual environment section!** I named the bundle with the deppendencies _site-packages.zip_
+**With a virtual environment section!** I named the bundle with the deppendencies _site-packages.zip_, and the complete bundle _function.zip_.

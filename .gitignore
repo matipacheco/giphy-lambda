@@ -129,3 +129,4 @@ dmypy.json
 .pyre/
 
 site-packages.zip
+function.zip
